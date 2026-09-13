@@ -1,4 +1,20 @@
-# Quiz Management System
+# Projects
+
+This repository contains two independent projects.
+
+## Parkinsons ABC Feature Selection
+
+The Python project compares Logistic Regression, Random Forest, and SVM classifiers with and without Artificial Bee Colony (ABC) feature selection on the Parkinsons dataset.
+
+Install its dependencies with:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Run the Python experiments from the repository root with `python lrwithabc.py`, `python rfwithabc.py`, or `python svmwithabc.py`.
+
+## Quiz Management System
 
 A console-based C++ quiz management system with separate student and admin workflows.
 
