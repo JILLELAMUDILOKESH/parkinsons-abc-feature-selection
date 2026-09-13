@@ -1,34 +1,34 @@
-# Parkinsons ABC Feature Selection
+# Quiz Management System
 
-This project compares Logistic Regression, Random Forest, and SVM classifiers with and without Artificial Bee Colony (ABC) feature selection on the Parkinsons dataset.
+A console-based C++ quiz management system with separate student and admin workflows.
 
-## Files
+## Features
 
-- `lrwithabc.py` - Logistic Regression with ABC feature selection
-- `rfwithabc.py` - Random Forest with ABC feature selection
-- `svmwithabc.py` - SVM with ABC feature selection
-- `rfclaud.py` and `svmclaud.py` - parallelized experiment variants
-- `parkinsons.data` - dataset used by the scripts
-- `parkinsons.names` - dataset description
+- Student registration and login
+- Admin login
+- Add, view, and delete quiz questions
+- Start a quiz and record scores
+- View previous results
+- Input validation for menu choices
 
-The duplicate `lrwithabc (1).py` file is retained as provided.
+## Build and Run
 
-## Setup
-
-Use Python 3.10 or newer, then install dependencies:
+Compile with a C++17 compiler from this directory:
 
 ```powershell
-python -m pip install -r requirements.txt
+g++ -std=c++17 main.cpp -o main.exe
+.\main.exe
 ```
 
-## Run
+The program reads and writes these local data files:
 
-Run a script from this directory so it can find `parkinsons.data`:
+- `admin.txt` - admin credentials
+- `users.txt` - registered users
+- `questions.txt` - quiz questions and answers
+- `results.txt` - quiz scores
 
-```powershell
-python lrwithabc.py
-python rfwithabc.py
-python svmwithabc.py
-```
+Credential and result files are intentionally not included in the public repository because they contain private data. Create them locally before running the program.
 
-Each script prints accuracy results and displays a comparison plot. The experiments can take time because ABC evaluates many candidate feature subsets.
+## Data File Formats
+
+`admin.txt` and `users.txt` use one username/password pair per line. `results.txt` stores one result per line. `questions.txt` stores each question followed by four options and the numeric answer position.
