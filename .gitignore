@@ -1,6 +1,5 @@
-main.exe
-*.obj
-*.o
-admin.txt
-users.txt
-results.txt
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
